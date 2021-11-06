@@ -39,87 +39,87 @@ gulp.task("build-styles", () => {
 });
 
 gulp.task("build-js", () => {
-    return gulp.src("./src/js/main.js", {allowEmpty: true})
-        .pipe(named())
-        .pipe(webpack({
-            mode: 'development',
-            watch: false,
-            devtool: "source-map",
-            module: {
-                rules: [{
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [
-                                ['@babel/preset-env', {
-                                    debug: true,
-                                    corejs: 3,
-                                    useBuiltIns: "usage"
-                                }]
-                            ],
-                            plugins: [
-                                "@babel/plugin-proposal-class-properties"
-                            ]
-                        }
-                    }
+  return gulp.src(["./src/js/main.js", "./src/js/login.js"], {allowEmpty: true})
+    .pipe(named())
+    .pipe(webpack({
+      mode: 'development',
+      watch: false,
+      devtool: "source-map",
+      module: {
+        rules: [{
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env', {
+                  debug: true,
+                  corejs: 3,
+                  useBuiltIns: "usage"
                 }]
+              ],
+              plugins: [
+                "@babel/plugin-proposal-class-properties"
+              ]
             }
-        }))
-        .pipe(gulp.dest(dist + 'js'));
-    // .on("end", browsersync.reload);
+          }
+        }]
+      }
+    }))
+    .pipe(gulp.dest(dist + 'js'));
+  // .on("end", browsersync.reload);
 });
 
 gulp.task("build-prod-js", () => {
-    return gulp.src("./src/js/main.js", {allowEmpty: true})
-        .pipe(named)
-        .pipe(webpack({
-            mode: 'production',
-            module: {
-                rules: [{
-                    test: /\.m?js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [
-                                ['@babel/preset-env', {
-                                    corejs: 3,
-                                    useBuiltIns: "usage"
-                                }]
-                            ],
-                            plugins: [
-                               "@babel/plugin-proposal-class-properties"
-                            ]
-                        }
-                    }
+  return gulp.src(["./src/js/main.js", "./src/js/login.js"], {allowEmpty: true})
+    .pipe(named)
+    .pipe(webpack({
+      mode: 'production',
+      module: {
+        rules: [{
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['@babel/preset-env', {
+                  corejs: 3,
+                  useBuiltIns: "usage"
                 }]
+              ],
+              plugins: [
+                "@babel/plugin-proposal-class-properties"
+              ]
             }
-        }))
-        .pipe(gulp.dest(dist + 'js'));
+          }
+        }]
+      }
+    }))
+    .pipe(gulp.dest(dist + 'js'));
 });
 
 gulp.task("optimize-images", function () {
-    return gulp.src("./dist/assets/img/**/*.{png, jpg, gif}")
-        .pipe(imagemin([
-            imagemin.gifsicle({
-                interlaced: true
-            }),
-            imagemin.mozjpeg({
-                quality: 75,
-                progressive: true
-            }),
-            imagemin.optipng({
-                optimizationLevel: 3,
-                progressive: true
-            })
-        ]))
-        .pipe(gulp.dest("./dist/assets/img"));
+  return gulp.src("./dist/assets/img/**/*.{png, jpg, gif}")
+    .pipe(imagemin([
+      imagemin.gifsicle({
+        interlaced: true
+      }),
+      imagemin.mozjpeg({
+        quality: 75,
+        progressive: true
+      }),
+      imagemin.optipng({
+        optimizationLevel: 3,
+        progressive: true
+      })
+    ]))
+    .pipe(gulp.dest("./dist/assets/img"));
 });
 
 gulp.task("optimize-symbols", function () {
-    return gulp.src("./dist/assets/img/icons/*.svg")
+  return gulp.src("./dist/assets/img/icons/*.svg")
         .pipe(svgmin())
         .pipe(svgstore({
             inlineSvg: true
