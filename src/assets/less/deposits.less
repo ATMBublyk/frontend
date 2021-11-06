@@ -1,0 +1,70 @@
+.make-deposit-form {
+  padding: 30px 50px 40px;
+  border: 0.5px solid #CECECE;
+  border-radius: 20px;
+}
+
+.make-deposit-form__header {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.make-deposit-form__submit-btn {
+  padding: 6px 30px;
+}
+
+.make-deposit-form__amount {
+  margin-bottom: 30px;
+}
+
+.deposits-list {
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 298px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #B8B8B8;
+  }
+}
+
+.deposits-list__item p {
+  color: #D2D2D2;
+}
+
+.deposits-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.deposits-list__item p {
+  margin-bottom: 0;
+}
+
+.deposits-list__item p span {
+  color: #198754;
+  font-weight: bold;
+}
+
+#deposit-amount {
+  width: 250px;
+}

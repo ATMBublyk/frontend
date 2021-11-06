@@ -1,0 +1,70 @@
+.make-withdrawal-form {
+  padding: 30px 50px 40px;
+  border: 0.5px solid #CECECE;
+  border-radius: 20px;
+}
+
+.make-withdrawal-form__header {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.make-withdrawal-form__submit-btn {
+  padding: 6px 30px;
+}
+
+.make-withdrawal-form__amount {
+  margin-bottom: 30px;
+}
+
+.withdrawals-list {
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 298px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #B8B8B8;
+  }
+}
+
+.withdrawals-list__item p {
+  color: #D2D2D2;
+}
+
+.withdrawals-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.withdrawals-list__item p {
+  margin-bottom: 0;
+}
+
+.withdrawals-list__item p span {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+#withdrawal-amount {
+  width: 250px;
+}

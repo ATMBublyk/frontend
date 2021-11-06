@@ -1,0 +1,101 @@
+.make-transfer-form {
+  padding: 30px 50px 40px;
+  border: 0.5px solid #CECECE;
+  border-radius: 20px;
+}
+
+.make-transfer-form__header {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.make-transfer-form {
+  padding: 30px 50px 40px;
+  border: 0.5px solid #CECECE;
+  border-radius: 20px;
+}
+
+.make-transfer-form__header {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.make-transfer-form__submit-btn {
+  padding: 6px 30px;
+}
+
+.make-transfer-form__destination-card {
+  margin-bottom: 15px;
+}
+
+.make-transfer-form__amount {
+  margin-bottom: 30px;
+}
+
+.transfers-list {
+  list-style: none;
+  padding: 0;
+  padding-right: 20px;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 310px;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #CECECE;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #B8B8B8;
+  }
+}
+
+.transfers-list__item-date {
+  color: #D2D2D2;
+}
+
+.transfers-list__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.transfers-list__item-info {
+  margin-bottom: 0;
+}
+
+.transfers-list__item-amount {
+  font-weight: bold;
+
+  &--red {
+    color: #dc3545;
+  }
+
+  &--green {
+    color: #198754;
+  }
+}
+
+.transfers-list__item-date {
+  margin-bottom: 2px;
+}
+
+#transfer-destination-card {
+  width: 250px;
+}
+
+#transfer-amount {
+  width: 250px;
+}
