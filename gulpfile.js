@@ -16,8 +16,8 @@ const named = require("vinyl-named");
 const dist = "./dist/";
 
 gulp.task("copy-html", () => {
-    return gulp.src("./src/pages/**/*.html")
-        .pipe(gulp.dest(dist + "pages"));
+    return gulp.src("./src/**/*.html")
+        .pipe(gulp.dest(dist));
 
     // .on("end", browsersync.reload);
 });
@@ -73,7 +73,7 @@ gulp.task("build-js", () => {
 
 gulp.task("build-prod-js", () => {
   return gulp.src(["./src/js/main.js", "./src/js/login.js"], {allowEmpty: true})
-    .pipe(named)
+    .pipe(named())
     .pipe(webpack({
       mode: 'production',
       module: {

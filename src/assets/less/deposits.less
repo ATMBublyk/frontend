@@ -11,14 +11,12 @@
 }
 
 .make-deposit-form__submit-btn {
+  margin-top: 30px;
   padding: 6px 30px;
 }
 
-.make-deposit-form__amount {
-  margin-bottom: 30px;
-}
 
-.deposits-list {
+.deposit-list {
   list-style: none;
   padding: 0;
   padding-right: 20px;
@@ -48,23 +46,39 @@
   }
 }
 
-.deposits-list__item p {
+.deposit-list__item p {
   color: #D2D2D2;
 }
 
-.deposits-list__item:not(:last-child) {
+.deposit-list__item:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.deposits-list__item p {
+.deposit-list__item p {
   margin-bottom: 0;
 }
 
-.deposits-list__item p span {
+.deposit-list__item p span {
   color: #198754;
   font-weight: bold;
 }
 
 #deposit-amount {
   width: 250px;
+}
+
+.no-deposits-label {
+  font-size: 20px;
+}
+
+.make-deposit-spinner {
+  width: 17px;
+  height: 17px;
+  margin-left: 10px;
+}
+
+.make-deposit-invalid {
+  margin: 0;
+  margin-top: 15px;
+  color: #dc3545;
 }

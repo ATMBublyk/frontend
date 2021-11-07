@@ -16,19 +16,18 @@ const setInvalidUi = (cardNumberObj, pinObj) => {
   invalidMessageObj.classList.remove(DISPLAY_NONE_CLASS);
 };
 
-
 const loginHandler = () => {
   const loginForm = document.querySelector(".login-form");
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const cardNumber = document.getElementById(CARD_NUMBER_INPUT).value;
-    const pin = document.getElementById(PIN_INPUT).value;
+    const cardNumber = document.getElementById(CARD_NUMBER_INPUT);
+    const pin = document.getElementById(PIN_INPUT);
 
     try {
       const response = await axios.post(LOGIN_PATH, {
-        cardNumber,
-        pin
+        cardNumber: cardNumber.value,
+        pin: pin.value
       });
 
       localStorage.setItem("accessToken", response.data.accessToken);
