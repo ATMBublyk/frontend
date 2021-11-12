@@ -11,7 +11,7 @@ const DISPLAY_NONE_CLASS = "d-none";
 const cardInfo = async () => {
   const accessToken = localStorage.getItem(ACCESS_TOKEN_ITEM_NAME);
 
-  let gotCardInfo = null;
+  let gotCardInfo;
   try {
     gotCardInfo = await axios.get(GET_CARD_INFO_URL, {
       headers: {

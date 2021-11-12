@@ -6,8 +6,4 @@ const mainPageUrl = "http://localhost/ATM_Bublyk/dist/dashboard.html";
 // const loginPageUrl = "https://atm-bublyk.pp.ua/login";
 // const mainPageUrl = "https://atm-bublyk.pp.ua/dashboard";
 
-export {
-  backendUrl,
-  loginPageUrl,
-  mainPageUrl
-};
+export { backendUrl, loginPageUrl, mainPageUrl };
